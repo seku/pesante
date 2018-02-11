@@ -131,15 +131,15 @@ h1 {
   text-decoration: none;
 }
 
-#flexMenu a:focus {
-  text-shadow: 4px -2px 40px var(--main-background-color);
-}
+#flexMenu a:focus {}
 
 #flexMenu a:hover {
   text-decoration: underline;
 }
 
-#flexMenu a:active {}
+#flexMenu a.active {
+  text-shadow: 4px -2px 40px var(--main-background-color);
+}
 
 #flexText article:not(:first-child) {
   display: none;

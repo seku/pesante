@@ -169,6 +169,13 @@
         }
       }
     }
+
+    $("#flexMenu a").click(function() {
+      $(this).addClass("active").siblings("a").removeClass("active")
+    });
+
+    $("#flexMenu a:first").trigger("click")
+
   </script>
 
   <script>
