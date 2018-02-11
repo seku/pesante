@@ -1,0 +1,190 @@
+:root {
+  --main-background-color: #298f8f;
+  --second-background-color: #ffffff;
+  --third-background-color: #68c0ac;
+  --navcolor: #d9c58f;
+  --navcolorHover: #E6d9c58f;
+  --navcolorTextShadow: #165d5d;
+  --second-text-color: #000000;
+  --third-text-color: #ffffff;
+}
+
+body {
+  margin: 0;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: 'Open Sans', sans-serif;
+  background-color: var(--main-background-color);
+}
+
+#menuContainer {
+  width: 100%;
+  min-width: 670px;
+  height: 55px;
+  margin-top: 20px;
+  text-align: center;
+  border-bottom: 1px solid var(--navcolor);
+  z-index: 100;
+  -webkit-animation: slide-in-top 0.7s cubic-bezier(0.250, 0.460, 0.450, 0.940) 3.7s both;
+  animation: slide-in-top 0.7s cubic-bezier(0.250, 0.460, 0.450, 0.940) 3.7s both;
+}
+
+#menuContainer ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+#menuContainer li {
+  display: inline-block;
+  vertical-align: bottom;
+  margin-right: 10px;
+}
+
+#menuContainer li a {
+  display: block;
+  min-width: 100px;
+  color: var(--navcolor);
+  text-decoration: none;
+  font-size: 1rem;
+  border: 1px solid var(--navcolor);
+  border-radius: 1px;
+  padding: 5px 20px;
+}
+
+#menuContainer a:hover:not(.active) {
+  background-color: var(--navcolorHover);
+  text-shadow: 1px 1px 0px var(--navcolorTextShadow);
+}
+
+#menuContainer .active {
+  background-color: var(--navcolor);
+  color: transparent;
+  font-weight: bold;
+  text-shadow: 1px 1px 0px var(--navcolorTextShadow);
+}
+
+.fa-bars {
+  position: fixed;
+  top: 21px;
+  right: 30px;
+  color: var(--navcolor);
+  visibility: hidden;
+}
+
+#divContainer {
+  margin: auto;
+}
+
+#pesante, #salon_masazu {
+  text-align: center;
+  color: white;
+  text-transform: uppercase;
+}
+
+#pesante {
+  position: relative;
+  display: block;
+  top: -10px;
+  font-size: 4em;
+  line-height: 1.2em;
+  font-weight: 800;
+  z-index: 9;
+  -webkit-animation: blur-out-contract 2s linear 0.5s reverse both;
+  animation: blur-out-contract 2s linear 0.5s reverse both;
+}
+
+@-webkit-keyframes blur-out-contract {
+  0% {
+    -webkit-filter: blur(0.01);
+    filter: blur(0.01);
+  }
+  100% {
+    letter-spacing: -0.5em;
+    -webkit-filter: blur(12px) opacity(0%);
+    filter: blur(12px) opacity(0%);
+  }
+}
+
+@keyframes blur-out-contract {
+  0% {
+    -webkit-filter: blur(0.01);
+    filter: blur(0.01);
+  }
+  100% {
+    letter-spacing: -0.5em;
+    -webkit-filter: blur(12px) opacity(0%);
+    filter: blur(12px) opacity(0%);
+  }
+}
+
+#salon_masazu {
+  position: relative;
+  top: -75px;
+  font-size: 1.2em;
+  font-weight: 100;
+  letter-spacing: 0.5em;
+  word-spacing: 0.75em;
+  padding-left: 14px;
+  z-index: 9;
+  -webkit-animation: slide-in-fwd-center 1.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) 3s both;
+  animation: slide-in-fwd-center 1.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) 3s both;
+}
+
+@-webkit-keyframes slide-in-fwd-center {
+  0% {
+    -webkit-transform: translateZ(-1400px);
+    transform: translateZ(-1400px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slide-in-fwd-center {
+  0% {
+    -webkit-transform: translateZ(-1400px);
+    transform: translateZ(-1400px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    opacity: 1;
+  }
+}
+
+#stopa {
+  width: 100%;
+  text-align: center;
+}
+
+#stopa img {
+  position: relative;
+  display: inline-block;
+  top: -35px;
+  height: 430px;
+  opacity: 0.65;
+}
+
+@media only screen and (max-width: 768px) {
+  #menuContainer {
+    display: none;
+  }
+  .fa-bars {
+    visibility: visible;
+  }
+  #divContainer {
+    position: relative;
+    top: 30px;
+  }
+  #stopa {
+    position: relative;
+    top: -30px;
+  }
+}

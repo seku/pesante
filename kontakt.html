@@ -1,0 +1,238 @@
+<!doctype html>
+<html class="no-js" lang="pl">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>Kontakt</title>
+  <meta name="author" content="Jacek Jarczok" />
+  <meta name="robots" content="index, follow" />
+  <meta name="description" content="Salon masażu Pesante - refleksolog Zofia Mazur" />
+  <meta name="keywords" content="refleksologia, refleksolog, masaż stóp, masaż głowy, salon masażu, masaż, masażystka, Pszczyna" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/boilerplate.css">
+  <link rel="stylesheet" href="css/kontakt.css">
+
+</head>
+
+<body>
+
+  <nav id="menuContainer">
+    <ul>
+      <li><a href="index.html">PESANTE</a></li>
+      <li><a href="omnie.html">O MNIE</a></li>
+      <li><a href="oferta.html">OFERTA</a></li>
+      <li><a href="refleksologia.html">REFLEKSOLOGIA</a></li>
+      <li><a href="kontakt.html" class="active">KONTAKT</a></li>
+    </ul>
+  </nav>
+
+  <nav id="menuBars">
+    <a href="mobile_menu.html"><i class="fa fa-bars fa-2x"></i></a>
+  </nav>
+  <br/>
+  </br/>
+
+  <header>
+    <h2>kontakt</h2>
+  </header>
+
+  <div id="divTextContainer">
+    <article id="lewy" class="divText">
+      <p>
+        Studio masażu "Pesante" znajduje się przy ulicy Zdrojowej w Pszczynie.<br /><br /> Napisz lub zadzwoń, aby umówić się na wizytę.
+      </p>
+    </article>
+    <section id="prawy" class="divText">
+      <p>
+        "Pesante"<br /> ul. Zdrojowa 2<br /> Pszczyna
+      </p>
+      <p>
+        505 868 543<br /> zosiamazur@pesante.pl
+      </p>
+    </section>
+  </div>
+
+  <a id="formularzButton" href="#scrollHere" onclick="otworzFormularz()"><h4>napisz wiadomość<br/>
+  <i class="fa fa-chevron-down fa-lg" aria-hidden="true"></i>
+</br/></h4></a>
+  <a id="scrollHere"></a>
+
+  <!-- Formularz kontaktowy -->
+  <div id="divContactForm">
+    <header>
+      <h3>Formularz kontaktowy</h3>
+    </header>
+    <form name="htmlform" method="post" action="html_form_send.php">
+      <label for="first_name">Imię (wymagane)</label>
+      <input type="text" name="first_name" maxlength="50" size="30"><br />
+      <label for="last_name">Nazwisko (wymagane)</label>
+      <input type="text" name="last_name" maxlength="50" size="30"><br />
+      <label for="email">Twój e-mail (wymagane)</label>
+      <input type="text" name="email" maxlength="80" size="30"><br />
+      <label for="telephone">Numer telefonu</label>
+      <input type="text" name="telephone" maxlength="30" size="30"><br />
+      <label for="comments">Twoja wiadomość (wymagane)</label>
+      <textarea name="comments" maxlength="1000" cols="40" rows="5"></textarea>
+      <input type="submit" value="Wyślij" id="wyslij">
+    </form>
+  </div>
+
+
+
+
+  <!-- jQuery library -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+  <!-- Latest compiled JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+
+  <script>
+    function otworzFormularz() {
+      var x = document.getElementById("divContactForm");
+      if (x.style.display === "block") {
+        x.style.display = "none";
+      } else {
+        x.style.display = "block";
+      }
+    }
+  </script>
+
+  <div id="map">
+    <header class="hide">
+      Zobacz salon masażu "Pesante" na mapie.
+    </header>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d10265.204068507854!2d18.9293295!3d49.9682132!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x27458e927957ce7c!2s%22PESANTE%22+Salon+Masa%C5%BCu%2C+Refleksologia+St%C3%B3p%2C+Twarzy+G%C5%82owy%2C+Masa%C5%BC+Terapeutyczny%2C+Zofia+Mazur!5e0!3m2!1spl!2spl!4v1517821715197"
+      width="800" height="600" frameborder="0" style="border:0" allowfullscreen></iframe>
+  </div>
+
+  <div id="footer">
+  </div>
+
+</body>
+
+
+<!-- google map api key
+AIzaSyCTu-Pd8hLlIz6ipaPGDRK5bdg_k43LTBI
+
+coś też może takiego hmm? <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCTu-Pd8hLlIz6ipaPGDRK5bdg_k43LTBI&callback=initMap"
+  type="text/javascript"></script>
+
+
+Inny skrypt do mapy
+
+<script>
+function myMap() {
+    var mapOptions = {
+        center: new google.maps.LatLng(49.968217, 18.929333),
+        zoom: 15,
+        mapTypeId: google.maps.MapTypeId.HYBRID
+    }
+var map = new google.maps.Map(document.getElementById("map"), mapOptions);
+}
+  </script>
+
+-->
+
+
+<!-- skrypt formularza kontaktowego-->
+<script>
+  <?php
+if(isset($_POST['email'])) {
+
+	// CHANGE THE TWO LINES BELOW
+	$email_to = "j.jarczok@gmail.com";
+
+	$email_subject = "Pesante - wiadomość z formularza";
+
+
+	function died($error) {
+		// your error code can go here
+		echo "Przykro nam, znaleźliśmy błędy w formularzu.<br /><br />";
+		echo $error."<br /><br />";
+		echo "Wróć proszę i napraw błędy.<br /><br />";
+		die();
+	}
+
+	// validation expected data exists
+	if(!isset($_POST['first_name']) ||
+		!isset($_POST['last_name']) ||
+		!isset($_POST['email']) ||
+		!isset($_POST['telephone']) ||
+		!isset($_POST['comments'])) {
+		died('Przepraszamy. Wystąpił problem z formularzem.');
+	}
+
+	$first_name = $_POST['first_name']; // required
+	$last_name = $_POST['last_name']; // required
+	$email_from = $_POST['email']; // required
+	$telephone = $_POST['telephone']; // not required
+	$comments = $_POST['comments']; // required
+
+	$error_message = "";
+	$email_exp = '/^[A-Za-z0-9._%-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,4}$/';
+  if(!preg_match($email_exp,$email_from)) {
+  	$error_message .= 'Błędny adres e-mail.<br />';
+  }
+	$string_exp = "/^[A-Za-z .'-]+$/";
+  if(!preg_match($string_exp,$first_name)) {
+  	$error_message .= 'Błędne imię.<br />';
+  }
+  if(!preg_match($string_exp,$last_name)) {
+  	$error_message .= 'Błędne nazwisko.<br />';
+  }
+  if(strlen($comments) < 2) {
+  	$error_message .= 'Błędny komentarz.<br />';
+  }
+  if(strlen($error_message) > 0) {
+  	died($error_message);
+  }
+	$email_message = "Form details below.\n\n";
+
+	function clean_string($string) {
+	  $bad = array("content-type","bcc:","to:","cc:","href");
+	  return str_replace($bad,"",$string);
+	}
+
+	$email_message .= "Imię: ".clean_string($first_name)."\n";
+	$email_message .= "Nazwisko: ".clean_string($last_name)."\n";
+	$email_message .= "Email: ".clean_string($email_from)."\n";
+	$email_message .= "Telefon: ".clean_string($telephone)."\n";
+	$email_message .= "Wiadomość: ".clean_string($comments)."\n";
+
+
+// create email headers
+$headers = 'Od: '.$email_from."\r\n".
+'Odpowiedz do: '.$email_from."\r\n" .
+'X-Mailer: PHP/' . phpversion();
+@mail($email_to, $email_subject, $email_message, $headers);
+?>
+
+  <!-- place your own success html below -->
+
+  Twoja wiadomość została wysłana.
+
+  <?php
+}
+die();
+?>
+</script>
+
+
+
+
+<script src="js/vendor/modernizr-3.5.0.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+<script>
+  window.jQuery || document.write('<script src="js/vendor/jquery-3.2.1.min.js"><\/script>')
+</script>
+<script src="js/plugins.js"></script>
+<script src="js/main.js"></script>

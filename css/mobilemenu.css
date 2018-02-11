@@ -1,0 +1,82 @@
+
+:root {
+    --main-background-color: #298f8f;
+    --second-background-color: #ffffff;
+    --third-background-color: #68c0ac;
+    --navcolor: #d9c58f;
+    --navcolorHover: #E6d9c58f;
+    --navcolorTextShadow: #165d5d;
+    --navcolorActive: #CCd9c58f;
+    --second-text-color: #000000;
+    --third-text-color: #ffffff;
+}
+
+body {
+    margin: 0;
+}
+
+* {
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+    background-color: var(--main-background-color);
+}
+
+article, aside, header, nav, section {
+  display: block;
+}
+
+#flexContainer {
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  min-height: 430px;
+  flex-direction: column;
+}
+
+#firstFlexdiv, #lastFlexdiv {
+  width: 100%;
+  flex: 1 1 auto;
+}
+
+#mobileMenu {
+  width: 100%;
+  min-height: 420px;
+  text-align: center;
+  margin: 5px 0;
+  flex: 0;
+}
+
+#mobileMenu ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+#mobileMenu li a {
+display: block;
+text-decoration: none;
+color: #ffffff;
+background-color: var(--main-background-color);
+width: 270px;
+margin: 30px auto;
+padding: 15px;
+border: 1px solid var(--navcolor);
+}
+
+.fa-remove {
+    position: fixed;
+    top: 21px;
+    right: 21px;
+    color: var(--navcolor);
+    visibility: visible;
+}
+
+#mobileMenu li a:hover {
+  border: 2px outset var(--navcolor);
+}
+
+@media only screen and (max-width: 430px) {
+  #mobileMenu li a {
+    width: 240px;
+  }
+}
